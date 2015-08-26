@@ -6,13 +6,14 @@ les 1:
 - datatypes
 - operatoren
 - variabelen
--- huiswerk: 
+- huiswerk: 
 - Codecademy.com ->Introduction to PHP
 
 les 2:
 - If else statement
 - arrays
 - $_GET
+- huiswerk
 - Codecademy.com -> Conditionals and control flow: if else/ Switch
 - CodeCademy.com -> Arrays
 
@@ -21,7 +22,7 @@ les 3:
 - $_GET en $_POST
 - array funtions
 - string functions
--- huiswerk:
+- huiswerk:
 - simple form with PHP response
  
 les 4:
@@ -34,7 +35,7 @@ les 5:
 - PDO
 - SQL ('inserts, updates, deletes')
 - for loop / while loop
--- Huiswerk:
+- Huiswerk:
 - Codecademy.com -> for loops in php / while loops in php
 
 les 6:
@@ -47,7 +48,7 @@ les 7:
 - functions
 - cookies
 - file io
--- Huiswerk:
+- Huiswerk:
 - Codecademy.com -> functions part 1 / functions part 2
 - 
 
