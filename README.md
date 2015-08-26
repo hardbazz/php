@@ -26,17 +26,20 @@ les 3:
 - simple form with PHP response
  
 les 4:
-- PDO
-- SQL ('selects')
-- php functions
-
-les 5:
 - php structure
 - PDO
-- SQL ('inserts, updates, deletes')
+- SQL ('selects')
 - for loop / while loop
 - Huiswerk:
 - Codecademy.com -> for loops in php / while loops in php
+
+les 5:
+- PDO
+- SQL ('inserts, updates, deletes')
+- php functions
+- Codecademy.com -> functions part 1 / functions part 2
+
+
 
 les 6:
 - PDO
@@ -49,8 +52,7 @@ les 7:
 - cookies
 - file io
 - Huiswerk:
-- Codecademy.com -> functions part 1 / functions part 2
-- 
+
 
 
 
