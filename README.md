@@ -51,8 +51,17 @@ les 7:
 - functions
 - cookies
 - file io
-- Huiswerk:
+- Huiswerk
 
+les 8:
+- herhaling voorgaande lessen:
+- loops, functies, DB connectie
+rode draad:
+- adresboek:
+php storm installeren.
+DB maken van adresboek in MySql Workbench
+fake adressen maken met Faker.
+Debuggen met phpstorm/xdebug
 
 
 
