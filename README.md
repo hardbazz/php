@@ -39,8 +39,6 @@ les 5:
 - php functions
 - Codecademy.com -> functions part 1 / functions part 2
 
-
-
 les 6:
 - PDO
 - SQL
@@ -57,13 +55,21 @@ les 8:
 - herhaling voorgaande lessen:
 - loops, functies, DB connectie
 rode draad:
-- adresboek:
 php storm installeren.
 DB maken van adresboek in MySql Workbench
-fake adressen maken met Faker.
-Debuggen met phpstorm/xdebug
+View maken van de adressen
+Huiswerk:
+- php exercises
 
-
-
+les 9: 
+- Login
+- Sessies
+- DB connectie netjes maken.
+rode draad:
+- adressen aanpassen
+- adressen verwijderen
+- adressen toevoegen
+Huiswerk:
+- php exercises
 
 
