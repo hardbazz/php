@@ -67,6 +67,13 @@ maak een script dat het volgende laat zien op één lijn:
 
 
 */
+for ($i = 1; $i <= 10; $i++) {
+    echo $i;
+    if($i < 10) {
+        echo '-';
+    }
+}
+
 
 
 echo '<br>';
