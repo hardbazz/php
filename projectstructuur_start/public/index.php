@@ -18,7 +18,7 @@ $contacts = $query->fetchAll();
             </li>
         <?php endforeach; ?>
     </ul>
-
+    <a href="views/contacts/add.php" class="btn btn-primary">Add Contact</a>
 </div>
 
 <?php require_once __DIR__ . '/footer.php'; ?>
