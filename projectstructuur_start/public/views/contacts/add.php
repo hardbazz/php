@@ -4,6 +4,8 @@
     <form class="col-md-4 col-md-push-4" action="../../../app/controllers/contactsController.php" method="POST">
         <h1 class="text-center">Add Contact</h1>
 
+        <input type="hidden" name="type" value="add"/>
+
         <div class="form-group">
             <label for="firstname">First Name</label>
             <input type="text" name="firstname" class="form-control"/>

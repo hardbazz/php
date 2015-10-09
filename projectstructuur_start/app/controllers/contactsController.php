@@ -1,27 +1,77 @@
 <?php
+
 require_once '../init.php';
 
-if ( empty( $_POST['username'] ) ) {
-    die('username niet ingevuld');
+switch( $_POST['type'] ) {
+
+    case 'add':
+        add($_POST['firstname'],
+            $_POST['lastname'],
+            $_POST['username'],
+            $_POST['phone']);
+        break;
+
+    case 'edit':
+
+        break;
+
+    case 'delete':
+        $id = filter_var($_POST['id'], FILTER_SANITIZE_NUMBER_INT);
+        remove($id);
+        break;
 }
 
 
-$firstname  = $_POST['firstname'];
-$lastname   = $_POST['lastname'];
-$username   = $_POST['username'];
-$phone      = $_POST['phone'];
 
-$sql = "INSERT INTO contacts (firstname, lastname, username, phone)
+
+
+function remove($id) {
+    global $db;
+
+    $sql = "DELETE FROM contacts WHERE id = :id";
+    $q = $db->prepare($sql);
+    $q->bindparam(':id', $id);
+    $q->execute();
+
+    header('location: ' . HTTP . 'public/index.php');
+
+}
+
+
+
+function add( $firstname, $lastname, $username, $phone)
+{
+    global $db;
+
+    if ( empty( $username ) ) {
+        die('username niet ingevuld');
+    }
+
+    $sql = "SELECT * FROM contacts WHERE username = :username";
+    $q = $db->prepare($sql);
+    $q->bindParam(':username', $username);
+    $q->execute();
+
+// counts the returned rows
+    if ( $q->rowCount() > 0 )
+    {
+        die('Username already exists');
+    }
+
+    $sql = "INSERT INTO contacts (firstname, lastname, username, phone)
                 VALUES (:firstname, :lastname, :username, :phone)";
 
-$q = $db->prepare($sql);
-$q->bindParam(':firstname', $firstname);
-$q->bindParam(':lastname', $lastname);
-$q->bindParam(':username', $username);
-$q->bindParam(':phone', $phone);
-$q->execute();
+    $q = $db->prepare($sql);
+    $q->bindParam(':firstname', $firstname);
+    $q->bindParam(':lastname', $lastname);
+    $q->bindParam(':username', $username);
+    $q->bindParam(':phone', $phone);
+    $q->execute();
 
-header('location: ../../public/index.php');
+    header('location: ../../public/index.php');
+
+}
+
 
 
 
