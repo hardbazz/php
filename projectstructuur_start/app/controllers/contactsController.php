@@ -12,7 +12,11 @@ switch( $_POST['type'] ) {
         break;
 
     case 'edit':
-
+        edit( $_POST['id'],
+              $_POST['firstname'],
+              $_POST['lastname'],
+              $_POST['username'],
+              $_POST['phone']);
         break;
 
     case 'delete':
@@ -73,7 +77,27 @@ function add( $firstname, $lastname, $username, $phone)
 }
 
 
+function edit($id, $firstname, $lastname, $username, $phone) {
 
+    global $db;
+
+    $sql = "UPDATE contacts SET
+              firstname = :firstname,
+              lastname  = :lastname,
+              username  = :username,
+              phone     = :phone
+              WHERE id = :id";
+
+    $q = $db->prepare($sql);
+    $q->bindParam(':firstname', $firstname);
+    $q->bindParam(':lastname', $lastname);
+    $q->bindParam(':username', $username);
+    $q->bindParam(':phone', $phone);
+    $q->bindParam(':id', $id);
+    $q->execute();
+
+    header('location: ' . HTTP . 'public/index.php');
+}
 
 
 

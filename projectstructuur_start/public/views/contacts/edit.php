@@ -18,6 +18,7 @@ $contact = $q->fetch();
         <h1 class="text-center">Edit Contact</h1>
 
         <input type="hidden" name="type" value="edit"/>
+        <input type="hidden" name="id" value="<?= $contact['id'] ?>"/>
 
         <div class="form-group">
             <label for="firstname">First Name</label>
