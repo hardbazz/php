@@ -5,7 +5,7 @@ switch($_POST['type']) {
     case 'login':
 
         if (login($_POST['username'], $_POST['password'])){
-            header('location: ')
+            header('location: ');
         }
 
 
